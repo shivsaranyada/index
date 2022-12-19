@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Inspector jitsi</title>
+  </head>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type=text/javascript>
+    $(function() {
+      $('a#ssbutton').bind('click', function() {
+        $.getJSON('/takess',
+            function(data) {
+          //do nothing
+        });
+        return false;
+      });
+    });
+</script>
+  <body>
+    <iframe
+      src="https://meet.jit.si/"
+      style="height: 900px; width: 100%;"
+    ></iframe>
+    <div class='container'>
+          <form>
+              <a href=# id=ssbutton><button class='btn btn-default'>Take screenshot</button></a>
+          </form>
+
+  </div>
+  </body>
+  <style>
+    html,
+    body {
+      overflow: hidden;
+      margin: 0px;
+      padding: 0px;
+    }
+    form{
+      position: absolute;
+      left: 50%;
+      z-index: 0;
+    }
+  </style>
+</html>
